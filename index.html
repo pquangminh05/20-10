@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Chúc Mừng 20/10 Yêu dấu Của Anh ❤️</title>
+  <meta name="description"
+    content="Trang web thiệp chúc mừng ngày 20/10 ngọt ngào, lãng mạn dành tặng người yêu với những điều ước tuyệt vời nhất.">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💌</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Canvas for floating romantic ambient particles (petals, sparkles, floating hearts) -->
+  <canvas id="ambient-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Audio Controls Floating Button -->
+  <div class="audio-control" id="audio-control" title="Bật / Tắt nhạc lãng mạn">
+    <button id="music-btn" class="music-toggle" aria-label="Toggle background music">
+      <span class="music-icon" id="music-icon">🎵</span>
+      <span class="music-text" id="music-text">Bật Nhạc</span>
+      <span class="music-waves">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Teasing Toast / Floating Notification -->
+  <div id="tease-bubble" class="tease-bubble"></div>
+
+  <!-- Background Glowing Aura -->
+  <div class="aura-glow-1"></div>
+  <div class="aura-glow-2"></div>
+
+  <!-- Main Wrapper -->
+  <main class="main-container" id="main-container">
+
+    <!-- Stage 1: The Interactive Envelope Section -->
+    <div class="envelope-scene" id="envelope-scene">
+      <div class="scene-header">
+        <div class="sparkle-badge">✨ 20 · 10 · Special Delivery ✨</div>
+        <h1 class="scene-title">Bức Thư Tình Gửi Em</h1>
+        <p class="scene-subtitle">Anh có một điều bất ngờ dành tặng riêng cho em. Hãy chạm vào bức thư nhé!</p>
+      </div>
+
+      <!-- 3D Realistic Envelope -->
+      <div class="envelope-wrapper" id="envelope-wrapper" role="button" tabindex="0" aria-label="Nhấn để mở lá thư">
+        <div class="envelope-shadow"></div>
+        <div class="envelope" id="envelope">
+          <!-- Back fold of envelope -->
+          <div class="envelope-back"></div>
+
+          <!-- Letter Card inside envelope -->
+          <div class="letter" id="letter">
+            <div class="letter-texture"></div>
+
+            <!-- Letter Inner Content -->
+            <div class="letter-content" id="letter-content">
+              <!-- Decorative stamps -->
+              <div class="letter-stamp-corner">
+                <span class="mini-stamp">🌸 20/10</span>
+              </div>
+
+              <div class="letter-header">
+                <span class="letter-date" id="letter-date">20 Tháng 10, 2026</span>
+                <h2 class="letter-salutation">Gửi Yêu Của Anh, 💕</h2>
+              </div>
+
+              <div class="letter-body">
+                <p class="letter-wish wish-lead">
+                  Nhân ngày Phụ Nữ Việt Nam <strong>20/10</strong>, anh chúc cô gái tuyệt vời nhất của anh:
+                </p>
+
+                <div class="wish-cards-grid">
+                  <div class="wish-item">
+                    <span class="wish-icon">💖</span>
+                    <span class="wish-text">Luôn <strong>vui vẻ</strong> &amp; ngập tràn tiếng cười</span>
+                  </div>
+                  <div class="wish-item">
+
+                    <span class="wish-text">Mỗi ngày thêm <strong>xinh đẹp</strong>, rạng ngời</span>
+                  </div>
+                  <div class="wish-item">
+
+                    <span class="wish-text">Mãi luôn <strong>hạnh phúc</strong></span>
+                  </div>
+                  <div class="wish-item">
+
+                    <span class="wish-text">Tự tin và <strong>luôn tỏa sáng</strong> </span>
+                  </div>
+                  <div class="wish-item">
+
+                    <span class="wish-text"> <strong>Kím được nhiều tiền</strong></span>
+                  </div>
+                  <div class="wish-item">
+
+                    <span class="wish-text">Và được <strong>đi du lịch thật nhìuuuuu</strong> </span>
+                  </div>
+                </div>
+
+                <div class="letter-closing">
+                  <p class="highlight-love">Anh Yêu Em Rất Nhiều! ❤️</p>
+
+                </div>
+
+                <!-- Interactive Question Section inside / under letter -->
+                <div class="question-container" id="question-container">
+                  <div class="question-divider">
+                    <span>💌</span>
+                  </div>
+                  <div class="question-card">
+                    <h3 class="question-title">Em có yêu anh không? 🥰</h3>
+                    <p class="question-hint">Trả lời thật lòng nha, không được nói dối đâu đó!</p>
+
+                    <div class="answers-group" id="answers-group">
+                      <button type="button" class="btn-yes" id="btn-yes">
+                        <span class="btn-heart">❤️</span>
+                        <span class="btn-text">Có ơi là có!</span>
+                        <span class="btn-glow"></span>
+                      </button>
+
+                      <button type="button" class="btn-no" id="btn-no">
+                        <span class="btn-text">Không 😜</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Envelope Front Pocket (Lower triangle) -->
+          <div class="envelope-front"></div>
+
+          <!-- Envelope Left & Right flaps -->
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+
+          <!-- Envelope Top Flap (opens with 3D rotation) -->
+          <div class="envelope-flap" id="envelope-flap">
+            <div class="wax-seal" id="wax-seal">
+              <span class="wax-heart">💖</span>
+              <span class="wax-tooltip">Chạm để mở</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instruction Click prompt -->
+      <div class="tap-hint" id="tap-hint">
+        <span class="tap-finger">👆</span>
+        <span class="tap-text">Chạm vào lá thư để mở</span>
+      </div>
+    </div>
+
+    <!-- Stage 2: Celebration Screen / Modal (Appears when clicking "CÓ") -->
+    <div class="celebration-overlay" id="celebration-overlay">
+      <div class="celebration-modal" id="celebration-modal">
+        <div class="modal-decor-top">
+          <span class="sparkle-star">✨</span>
+          <span class="sparkle-heart">💖</span>
+          <span class="sparkle-star">✨</span>
+        </div>
+
+        <h2 class="celebration-title">Anh Cũng Yêu Em Rất Nhiều! 💕</h2>
+        <p class="celebration-subtitle">Biết là em cũng yêu anh mà 🥰</p>
+
+        <!-- Cute Couple Artwork -->
+        <div class="celebration-art-wrapper">
+          <img src="assets/couple.jpg" alt="Đôi ta ngọt ngào ngày 20/10" class="couple-art-img" loading="eager">
+          <div class="art-badge">Happy Vietnamese Women's Day 🌹</div>
+        </div>
+
+        <div class="celebration-message">
+          <p class="sweet-quote">
+            "Cảm ơn em đã xuất hiện và làm cho thế giới của anh trở nên ấm áp, ngập tràn màu sắc rực rỡ như thế này.
+            Chúc em ngày 20/10 hạnh phúc nhất, và chúc chúng mình sẽ luôn nắm tay nhau thật lâu nhé!"
+          </p>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-replay" id="btn-replay">
+            <span>💌 Xem lại thư chúc</span>
+          </button>
+          <button type="button" class="btn-more-hearts" id="btn-more-hearts">
+            <span>✨ Bắn tim liên tục</span>
+          </button>
+        </div>
+
+        <div class="footer-love">
+          <span>Tặng em với tất cả tình yêu thương chân thành nhất 💖</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
